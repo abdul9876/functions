@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+void circle();
+void square();
+void rectangle();
+int main()
+{
+    int choice;
+    do{
+    cout<<"\npick one: \n1.square\n2.rectangle\n3.circle\n4.quit\n";
+    cout<<"enter yur choice:- ";
+    cin>>choice;
+    switch(choice){
+        case 1: square();
+                break;
+        case 2: rectangle();
+                break;
+        case 3: circle();
+                break;
+        case 4: exit(0);
+               break;
+        default:cout<<"invalid choice";
+    }
+    }while(choice<4);
+    }
+void circle(){
+    int x;
+    cout<<"enter the raidus of the circle: ";
+    cin>>x;
+    float area=(float)3.14*x*x;
+    cout<<"area of the circle is "<<area;
+}
+void square(){
+    int y;
+    cout<<"enter the side of the square: ";
+    cin>>y;
+    int area= y*y;
+    cout<<"the area of the square is "<<area;
+}
+void rectangle(){
+    int w,z;
+    cout<<"enter the length and breadth of the rectangle: ";
+    cin>>w>>z;
+    int area= w*z;
+    cout<<"the area of the rectangle is "<<area;
+}
